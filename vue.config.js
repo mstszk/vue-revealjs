@@ -1,4 +1,5 @@
 const Mode = require('frontmatter-markdown-loader/mode')
+const path = require('path')
 
 module.exports = {
   chainWebpack(config){
@@ -11,5 +12,16 @@ module.exports = {
           vue: { root: 'slides-body' },
         })
       .end()
+
+    const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+    types.forEach(type => config.module.rule('stylus').oneOf(type)
+      .use('style-resource')
+      .loader('style-resources-loader')
+      .options({
+        patterns: [
+          path.resolve(__dirname, './src/styles/palette.styl'),
+        ],
+      })
+    )
   },
 }

@@ -4,7 +4,7 @@
     ul.slides
       li(v-for="(slide, key) in slides" :key="key")
         a(:href="`/${slide.slug}`") {{ slide.title }}
-        span {{ slide.date }}
+        p {{ slide.date }}
 </template>
 
 <script>
@@ -26,3 +26,31 @@ export default {
   }
 }
 </script>
+
+<style lang="stylus">
+.home
+  padding 2rem
+  h2
+    font-size 1.4rem
+    font-weight bold
+    margin-bottom 1rem
+    user-select none
+
+  .slides li
+    list-style none
+    padding-left .5rem
+    a
+      font-weight bold
+      transition opacity .3s
+      color $mainColor
+      &:hover
+        opacity .6
+    p
+      font-size .8rem
+      opacity .8
+      user-select none
+    &:not(:last-child)
+      padding-bottom .5rem
+      margin-bottom .5rem
+      border-bottom 1px solid lightgray
+</style>
