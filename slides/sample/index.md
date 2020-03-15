@@ -3,6 +3,7 @@ title: Vue-reveal.js
 subtitle: A sample slides
 author: Masato Suzuki
 institute: Tokyo institute of Technology
+aspect: "4:3"
 ---
 
 ## Section

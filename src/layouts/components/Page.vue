@@ -5,10 +5,21 @@
 
 <script>
 export default {
+  data() {
+    return {
+      page: 0,
+      pageNum: 0
+    }
+  },
   mounted() {
-    const head = this.$refs.page.firstChild
-    this.$refs.page.removeChild(head)
-    this.$refs.page.innerHTML = `<div class="header">${head.outerHTML}</div><div class="content">${this.$refs.page.innerHTML}</div>`
+    const self = this.$refs.page
+    const head = self.firstChild
+    const section = self.parentNode
+    const sections = [].slice.call(section.parentNode.children)
+    const page = sections.indexOf(section) + 1
+    const pageNum = sections.length
+    self.removeChild(head)
+    self.innerHTML = `<div class="header">${head.outerHTML}</div><div class="content">${self.innerHTML}</div><div class="page-num">${page}/${pageNum}</div>`
   }
 }
 </script>
@@ -35,10 +46,18 @@ export default {
       position absolute
       top 50%
       transform translateY(-50%)
+
   .content
     grid-area content
     box-sizing border-box
     width 100%
     align-self center
     padding 0 2em
+
+  .page-num
+    position absolute
+    bottom .5rem
+    right .5rem
+    font-size .8em
+    opacity 0.5
 </style>
