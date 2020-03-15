@@ -1,7 +1,7 @@
 <template lang="pug">
   .home
-    h2 SLIDES
-    ul.slides
+    h2 List
+    ul.links
       li(v-for="(slide, key) in slides" :key="key")
         a(:href="`/${slide.slug}`") {{ slide.title }}
         p {{ slide.date }}
@@ -36,7 +36,7 @@ export default {
     margin-bottom 1rem
     user-select none
 
-  .slides li
+  .links li
     list-style none
     padding-left .5rem
     a
