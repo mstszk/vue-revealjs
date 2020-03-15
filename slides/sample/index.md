@@ -73,6 +73,14 @@ e^{i \pi} + 1 &= 0
 \end{aligned}
 $$
 
+#### Macros
+
+$$
+A => B
+$$
+
+- `A => B`
+
 ### Images
 
 ![](./imgs/logo.png)

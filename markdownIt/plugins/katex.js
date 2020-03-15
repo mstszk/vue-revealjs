@@ -1,10 +1,4 @@
-const userMacros = {
-  '<=>': '\\Leftrightarrow',
-  '=>': '\\Rightarrow',
-  '->': '\\rightarrow',
-  '<=': '\\Leftarrow',
-  '<-': '\\leftarrow',
-}
+const userMacros = require('../../latex-macros.json')
 
 function mathInline(state) {
   const start = state.pos
