@@ -59,16 +59,17 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 ### Math
 
-Inline
+#### Inline
 
 $F = ma + \hoge$
 
-Display
+#### Display
 
 $$
 \begin{aligned}
 E &= mc^2 \\
 e^{i \pi} + 1 &= 0
+
 \end{aligned}
 $$
 
@@ -76,13 +77,13 @@ $$
 
 ![](./imgs/logo.png)
 
-Resize
+#### Resize
 
 ![](./imgs/logo.png =400x80)
 
 ![](./imgs/logo.png) {{ .R }}
 
-Floated
+#### Floated
 
 ### Tables
 
@@ -92,7 +93,7 @@ Floated
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
 
-Right aligned columns
+#### Right aligned columns
 
 | Option | Description |
 | ------:| -----------:|
@@ -100,23 +101,23 @@ Right aligned columns
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
 
-### Blockquotes
-
-Blockquotes
+### Blockquote
 
 > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-### Code
+### Codes
 
-Inline `code`
+#### Inline
 
-Block code
+`code`
+
+#### Block code
 
 ```
 Sample text here...
 ```
 
-Syntax highlighting
+#### Syntax highlighting
 
 ```js
 var foo = function (bar) {
@@ -128,13 +129,27 @@ console.log(foo(5));
 
 ### Others
 
-markdown-it-emoji
+#### emoji
 
-:thinking:
+- :thinking:
 
-markdown-it-sub / markdown-it-sup
+#### sub / sup
 
 - H~2~O
 - 19^th^
 
-## Thank you!
+#### colors
+
+- *Red*{{.red}}, *Orange*{{.orange}}, *yellow*{{.yellow}}, *green*{{.green}}, *purple*{{.purple}}
+
+#### container
+
+::: header
+content
+:::
+
+::: Theorem 0.0 (Pythagoras) {{ .red }}
+$c^2 = a^2 + b^2$
+:::
+
+## Thank you
