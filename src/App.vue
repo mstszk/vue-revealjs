@@ -5,3 +5,15 @@
 
 <style src="reveal.js/css/reset.css"></style>
 <style src="./styles/app.styl" lang="stylus"></style>
+<style lang="stylus">
+.slides
+	transition filter .3s
+.medium-zoom--opened
+	.slides
+		filter blur(12px)
+	.medium-zoom-overlay
+		z-index 2 !important
+		background transparent !important
+	.medium-zoom-image
+		z-index 3 !important
+</style>
