@@ -1,5 +1,9 @@
 # vue-revealjs
 
+A minimal example of reveal.js using vue-cli.
+
+By default, the color palette is set according to [Nord](https://www.nordtheme.com/). And the design is created with reference to [Metropolis](https://github.com/matze/mtheme).
+
 ## Project setup
 ```
 yarn install
@@ -9,16 +13,3 @@ yarn install
 ```
 yarn serve
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

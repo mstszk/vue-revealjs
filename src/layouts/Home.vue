@@ -42,7 +42,7 @@ export default {
     a
       font-weight bold
       transition opacity .3s
-      color $mainColor
+      color $accentColor
       &:hover
         opacity .6
     p

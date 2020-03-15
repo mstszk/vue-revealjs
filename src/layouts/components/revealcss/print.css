@@ -1,0 +1,4 @@
+.reveal .slides .pdf-page > section {
+  height: 100%;
+  padding: 0;
+}

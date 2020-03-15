@@ -1,5 +1,6 @@
 const Mode = require('frontmatter-markdown-loader/mode')
 const path = require('path')
+const md = require('./markdownIt')
 
 module.exports = {
   chainWebpack(config){
@@ -10,6 +11,7 @@ module.exports = {
         .options({
           mode: [Mode.VUE_RENDER_FUNCTIONS],
           vue: { root: 'slides-body' },
+          markdownIt: md
         })
       .end()
 

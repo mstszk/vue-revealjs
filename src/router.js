@@ -1,7 +1,7 @@
 import Vue from "vue"
 import VueRouter from 'vue-router'
 import Home from './layouts/Home.vue'
-import Slide from './layouts/Slide.vue'
+import Slides from './layouts/Slides.vue'
 
 Vue.use(VueRouter)
 
@@ -25,7 +25,7 @@ const router = new VueRouter({
     ...slides.map(slide => {
         return {
           path: `/${slide.slug}`,
-          component: Slide,
+          component: Slides,
         }
     })
   ]

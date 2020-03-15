@@ -1,0 +1,143 @@
+@require './palette'
+@require './fonts'
+@require './prism-nord'
+
+p, ul, ol
+      line-height 1.7
+
+// Subsubsection
+h4
+  font-weight bold
+  font-size 1.2em
+  margin .5em
+  text-decoration underline $accentColor
+  text-underline-position under
+
+// Emphasis
+strong
+  font-weight bold
+em
+  font-style italic
+s
+  text-decoration line-through
+
+// Lists
+ul
+  padding-left 1em
+ul, ol
+  li
+    > ul, ol > li
+      font-size .95em
+      color lighten($textColor, 15%)
+      > ul, ol > li
+        font-size .95em
+        color lighten($textColor, 30%)
+ol
+  counter-reset list-count
+  list-style none
+  > li:before
+    content counter(list-count) ". "
+    counter-increment list-count
+    font-weight 500
+  > li > ul
+    padding-left 2em
+
+// Horizontal Rules
+hr
+  border 0
+  border-top 2px solid $accentColor
+
+// Links
+a
+  color $linkColor
+  text-decoration underline
+
+// Images
+img
+  max-width 100%
+  padding .5em
+  box-sizing border-box
+
+// Tables
+table
+  border-collapse collapse
+  display block
+  overflow-x auto
+  font-size .9em
+  margin 1rem
+th, td
+  padding 1rem
+th
+  font-weight 500
+thead
+  border-top 4px solid $textColor
+tbody
+  border-top 2px solid $textColor
+  border-bottom 4px solid $textColor
+
+// Blockquotes
+blockquote
+  font-size .9em
+  position relative
+  margin 1rem 1em
+  padding .2em 1em
+  background darken($backgroundColor, 5%)
+  p
+    font-style italic
+
+// Codes
+code, .line-number
+  font-family $ffCode
+// Inline
+code
+  color $codeColor
+  background-color $codeBgColor
+  padding 0.25rem 0.5rem
+  margin 0
+  font-size 0.85em
+  border-radius 3px
+// Block
+pre, pre[class*="language-"]
+  line-height 1
+  padding 1.25rem 1.5rem
+  color $codeColor
+  background-color $codeBgColor
+  border-radius 6px
+  code
+    padding 0
+    background-color transparent
+
+$codeLang = bash, shell, javascript, js, julia, jl, python, py
+for lang in $codeLang
+  pre{'[class~="language-' + lang + '"]'}
+    position relative
+    &:before
+      content ('' + lang)
+      position absolute
+      z-index 3
+      top 0.8em
+      right 1em
+      font-size 0.75em
+      color rgba(255, 255, 255, 0.4)
+
+// Plugins
+sub
+	font-size .7em
+	vertical-align sub
+sup
+	font-size .7em
+	vertical-align super
+mark
+  color $textColor
+  font-weight 500
+  background linear-gradient(white 50%, lighten($accentColor, 50%) 50%)
+u
+  text-underline-position under
+.L
+  float left
+.R
+  float right
+.C
+  display inline-block
+  width 100%
+  text-align center

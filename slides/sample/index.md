@@ -1,16 +1,21 @@
 ---
-title: Sample Text
-author: Author
-date: 2000/01/01
+title: Vue-reveal.js
+subtitle: A sample slides
+author: Masato Suzuki
+institute: Tokyo institute of Technology
 ---
 
 ## Section
 
 ### Subsection
 
-Sample text
+Text
 
-***
+#### Subsubsection
+
+日本語のテキスト
+
+### Emphasis
 
 **Bold text**
 
@@ -18,38 +23,65 @@ Sample text
 
 ~~Strikethrough~~
 
-> Blockquotes
+_Underlined text_
 
-- Create a list by starting a line with `+`, `-`, or `*`
-  - Marker character change forces new list start:
+==Marked text==
 
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
+### Lists, Horizontal rules
+
+- List item
+    - Nested list item
+        - Nested list item
+
+---
+
+1. Ordered list item
+1. Ordered list item
 
 ---
 
-### Code
-
-Inline `code`
-
-Block code
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-``` js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
+- List item
+    1. Nested ordered list item
 
 ---
+
+1. Ordered list item
+    - Nested list item
+
+### Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+
+### Math
+
+Inline
+
+$F = ma + \hoge$
+
+Display
+
+$$
+\begin{aligned}
+E &= mc^2 \\
+e^{i \pi} + 1 &= 0
+\end{aligned}
+$$
+
+### Images
+
+![](./imgs/logo.png)
+
+Resize
+
+![](./imgs/logo.png =400x80)
+
+![](./imgs/logo.png) {{ .R }}
+
+Floated
 
 ### Tables
 
@@ -67,17 +99,41 @@ Right aligned columns
 | engine | engine to be used for processing templates. Handlebars is the default. |
 | ext    | extension to be used for dest files. |
 
----
+### Blockquotes
 
-### Links
+Blockquotes
 
-[link text](http://dev.nodeca.com)
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+### Code
 
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+Inline `code`
 
+Block code
 
-### Images
+```
+Sample text here...
+```
 
-![](./imgs/logo.png)
+Syntax highlighting
+
+```js
+var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
+```
+
+### Others
+
+markdown-it-emoji
+
+:thinking:
+
+markdown-it-sub / markdown-it-sup
+
+- H~2~O
+- 19^th^
+
+## Thank you!
