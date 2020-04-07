@@ -53,8 +53,8 @@ export default {
     .title
       font-size 2em
       font-weight 500
-      margin-bottom .75em
     .subtitle
+      margin-top .75em
       font-size 1.4em
       color lighten($textColor, 20%)
 
