@@ -89,7 +89,7 @@ $$
 
 ![](./imgs/logo.png =400x80)
 
-![](./imgs/logo.png) { .R }
+![](./imgs/logo.png) {{ .R }}
 
 #### Floated
 
@@ -148,7 +148,7 @@ console.log(foo(5));
 
 #### colors
 
-- [Red]{.red}, [Orange]{.orange}, [yellow]{.yellow}, [green]{.green}, [purple]{.purple}
+- [Red]{{.red}}, [Orange]{{.orange}}, [yellow]{{.yellow}}, [green]{{.green}}, [purple]{{.purple}}
 
 #### container
 
@@ -156,7 +156,7 @@ console.log(foo(5));
 content
 :::
 
-::: [Theorem 0.0]{.red} (Pythagoras)
+::: [Theorem 0.0]{{.red}} (Pythagoras)
 $c^2 = a^2 + b^2$
 :::
 

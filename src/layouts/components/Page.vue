@@ -44,6 +44,7 @@ export default {
     font-size 1.4em
     h3
       position absolute
+      font-weight 500
       top 50%
       transform translateY(-50%)
 

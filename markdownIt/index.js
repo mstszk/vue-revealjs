@@ -14,7 +14,10 @@ md.use(require('markdown-it-mark'))
 md.use(require('markdown-it-underline'))
 md.use(require('markdown-it-imsize'))
 md.use(require('markdown-it-bracketed-spans'))
-md.use(require('markdown-it-attrs'))
+md.use(require('markdown-it-attrs'), {
+  leftDelimiter: '{{',
+  rightDelimiter: '}}',
+})
 md.use(require('./plugins/container'))
 md.use(require('./plugins/katex'))
 md.use(require('./plugins/bib'))
