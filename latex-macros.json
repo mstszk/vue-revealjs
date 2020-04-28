@@ -1,14 +1,1 @@
-{
-  "<=>": "\\Leftrightarrow",
-  "<==>": "\\Longleftrightarrow",
-  "==>": "\\Longrightarrow",
-  "=>": "\\Rightarrow",
-  "<==": "\\Longleftarrow",
-  "<=": "\\Leftarrow",
-  "<->": "\\leftrightarrow",
-  "<-->": "\\longleftrightarrow",
-  "-->": "\\longrightarrow",
-  "->": "\\rightarrow",
-  "<--": "\\longleftarrow",
-  "<-": "\\leftarrow"
-}
+{}
