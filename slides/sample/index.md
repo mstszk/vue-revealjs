@@ -76,10 +76,10 @@ $$
 #### Macros
 
 $$
-A => B
+A \Ra B
 $$
 
-- `A => B`
+- `A \Ra B`
 
 ### Images
 
