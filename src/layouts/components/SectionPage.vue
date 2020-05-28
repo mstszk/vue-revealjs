@@ -1,6 +1,7 @@
 <template lang="pug">
   .section-container
-    slot
+    .contents
+      slot
 </template>
 
 <style lang="stylus">
@@ -10,14 +11,22 @@
   width 100%
   text-align left
 
-  h2
+  .contents
+    margin auto
     position absolute
     left 0
-    bottom 50%
+    top calc(50% - 2em)
     width calc(100% - 5em)
     margin-left 2.5em
     margin-right 2.5em
-    padding-bottom .5em
-    font-size 2em
-    border-bottom 4px solid $accentColor
+
+    h2
+      padding-bottom .5em
+      font-size 2em
+      border-bottom 4px solid $accentColor
+      margin-bottom .2em
+    > *:not(h2)
+      text-align right
+      font-size .8em
+      color lighten($textColor, 15%)
 </style>
