@@ -36,7 +36,7 @@
     "markdown-it-sup": "^1.0.0",
     "markdown-it-underline": "^1.0.1",
     "moment": "^2.24.0",
-    "prismjs": "^1.19.0",
+    "prismjs": "^1.21.0",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
     "reveal.js": "^3.9.2",
