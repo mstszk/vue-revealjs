@@ -24,17 +24,21 @@ export default {
       this.aspect = this.aspect === '4:3' ? '16:10' : this.aspect === '16:10' ? '16:9' : '4:3'
     },
     printSlides() {
-      document.querySelector('.printer-window').src = `${window.origin}${window.location.pathname}?print-pdf`
-    },
-  },
-  mounted() {
-    if (!this.print) {
       const el = document.querySelector('.printer-window')
+      el.src = `${window.origin}${window.location.pathname}?print-pdf`
       el.onload = () => {
         el.contentWindow.print()
       }
-    }
-  }
+    },
+  },
+  // mounted() {
+  //   if (!this.print) {
+  //     const el = document.querySelector('.printer-window')
+  //     el.onload = () => {
+  //       el.contentWindow.print()
+  //     }
+  //   }
+  // }
 }
 </script>
 
