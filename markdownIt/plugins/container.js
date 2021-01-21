@@ -49,11 +49,9 @@ module.exports = _md => _md.use(require('markdown-it-container'), 'container', {
   validate: () => true,
   render: (tokens, idx) => {
     if (tokens[idx].nesting === 1) {
-      let headerClass = "container-header "
-      if (tokens[idx].attrs) {
-        headerClass += tokens[idx].attrs.filter(el => el[0] === 'class').map(el => el[1]).join(' ')
-      }
-      return `<div class="container"><div class="${headerClass}">${md.render(tokens[idx].info.trim())}</div><div class="container-content">`
+      const header = tokens[idx].info.split(" ").filter(t => !t.startsWith(".")).join(" ")
+      const classes = tokens[idx].info.split(" ").filter(t => t.startsWith(".")).map(t => t.slice(1, )).join(" ")
+      return `<div class="container ${classes}"><div class="container-header">${md.render(header)}</div><div class="container-content">`
     } else {
       return '</div></div>\n'
     }

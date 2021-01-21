@@ -150,6 +150,8 @@ console.log(foo(5));
 
 - [Red]{{.red}}, [Orange]{{.orange}}, [yellow]{{.yellow}}, [green]{{.green}}, [purple]{{.purple}}
 
+### Containers
+
 #### container
 
 ::: header
@@ -159,5 +161,15 @@ content
 ::: [Theorem 0.0]{{.red}} (Pythagoras)
 $c^2 = a^2 + b^2$
 :::
+
+::: .lightgray Light gray Container
+$c^2 = a^2 + b^2$
+:::
+
+::: .gray Gray Container
+$c^2 = a^2 + b^2$
+:::
+
+
 
 ## Thank you

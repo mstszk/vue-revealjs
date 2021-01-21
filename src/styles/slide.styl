@@ -155,12 +155,20 @@ u
 .purple
   color #b48ead
 .container
+  padding .5em 1em
+  margin .5em
+  border-radius .5em
   .container-header
     font-weight 500
+    &> p
+      line-height 1.5em
   .container-content
     margin-left .5em
     padding-left .5em
-    border-left 4px solid $textColor
+  &.gray
+    background #d3d3d3
+  &.lightgray
+    background #ebebeb
 
 .bib
   .authors, .year
