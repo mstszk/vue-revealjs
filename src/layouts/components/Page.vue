@@ -54,6 +54,8 @@ export default {
     width 100%
     align-self center
     padding 0 2em
+    max-height 100%
+    overflow-y auto
 
   .page-num
     position absolute
